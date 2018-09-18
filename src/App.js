@@ -9,6 +9,8 @@ const API_KEY = "f55fbb38bc222d84aa979f488871d9f7";
 class App extends React.Component {
     state = {
         temperature: undefined,
+        high: undefined,
+        low: undefined,
         city: undefined,
         country: undefined,
         humidity: undefined,
@@ -24,9 +26,11 @@ class App extends React.Component {
         const data = await api_call.json();
 
         if(city && country) {
-            //console.log(data);
+            console.log(data);
             this.setState({
                 temperature: data.main.temp,
+                high: data.main.temp_max,
+                low: data.main.temp_min,
                 city: data.name,
                 country: data.sys.country,
                 humidity: data.main.humidity,
@@ -36,6 +40,8 @@ class App extends React.Component {
         } else {
             this.setState({
                 temperature: undefined,
+                high: undefined,
+                low: undefined,
                 city: undefined,
                 country: undefined,
                 humidity: undefined,
@@ -54,6 +60,8 @@ class App extends React.Component {
                 
                 <Weather 
                 temperature={this.state.temperature}
+                high={this.state.high}
+                low={this.state.low}
                 city={this.state.city}
                 country={this.state.country}
                 humidity={this.state.humidity}
