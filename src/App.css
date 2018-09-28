@@ -12,7 +12,7 @@ button {
 }
 
 button:hover {
-    background-color: #4CAF50;
+    background-color: #7FD5B3;
 }
 
 input[type=text] {
@@ -21,4 +21,12 @@ input[type=text] {
     letter-spacing: 1px;
     margin-right: 10px;
     margin-top: 5px;
+}
+
+#error {
+    color: red;
+}
+
+#location, #humidity, #high, #low, #temperature, #conditions {
+    color: #404040;
 }
