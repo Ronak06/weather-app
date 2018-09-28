@@ -5,6 +5,7 @@
   "dependencies": {
     "ajv": "^6.5.4",
     "bootstrap": "^3.3.7",
+    "kelvin-to-celsius": "^1.1.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-scripts": "1.1.5"
