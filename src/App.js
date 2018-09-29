@@ -5,6 +5,7 @@ import Form from './components/Form';
 import Weather from './components/Weather';
 
 const API_KEY = "f55fbb38bc222d84aa979f488871d9f7";
+const kelvinToCelsius = require('kelvin-to-celsius');
 
 class App extends React.Component {
     state = {
@@ -27,9 +28,9 @@ class App extends React.Component {
 
         if(city && country) {
             this.setState({
-                temperature: data.main.temp,
-                high: data.main.temp_max,
-                low: data.main.temp_min,
+                temperature: kelvinToCelsius(data.main.temp),
+                high: kelvinToCelsius(data.main.temp_max),
+                low: kelvinToCelsius(data.main.temp_min),
                 city: data.name,
                 country: data.sys.country,
                 humidity: data.main.humidity,
