@@ -6,6 +6,8 @@ import Weather from './components/Weather';
 
 const API_KEY = "f55fbb38bc222d84aa979f488871d9f7";
 const kelvinToCelsius = require('kelvin-to-celsius');
+const wConditions = ['clear sky', 'few clouds', 'scattered clouds', 'broken clouds', 
+'shower rain', 'rain', 'thunderstorm', 'snow', 'mist'];
 
 class App extends React.Component {
     state = {
